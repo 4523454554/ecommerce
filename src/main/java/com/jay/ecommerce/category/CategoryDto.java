@@ -22,11 +22,14 @@ public class CategoryDto {
     @NotBlank
     private String imageUrl;
 
+    private Yn deleteYn;
+
     public Category toEntity() {
         return Category.builder()
                 .categoryName(categoryName)
                 .description(description)
                 .imageUrl(imageUrl)
+                .deleteYn(Yn.N)
                 .build();
     }
 }
